@@ -4,22 +4,34 @@ import 'package:flutter/material.dart';
 class HotelAppTheme {
   static TextTheme _buildTextTheme(TextTheme base) {
     const String fontName = 'WorkSans';
+  /*  static const TextTheme textTheme = TextTheme(
+    //headline4: display1,
+    headline: base.headline.copyWith(fontFamily: fontName),
+    //headline: title,
+    subtitle: subtitle,
+    body1: body2,
+    body2: body1,
+    caption: caption,
+  );
+*/
     return base.copyWith(
-      headline1: base.headline1.copyWith(fontFamily: fontName),
-      headline2: base.headline2.copyWith(fontFamily: fontName),
-      headline3: base.headline3.copyWith(fontFamily: fontName),
-      headline4: base.headline4.copyWith(fontFamily: fontName),
-      headline5: base.headline5.copyWith(fontFamily: fontName),
-      headline6: base.headline6.copyWith(fontFamily: fontName),
+      headline: base.headline.copyWith(fontFamily: fontName),
+      title: base.title.copyWith(fontFamily: fontName),
+       subhead: base.subhead.copyWith(fontFamily: fontName),
+    display1: base.display1.copyWith(fontFamily: fontName),
+    display2: base.display2.copyWith(fontFamily: fontName),
+    display3: base.display3.copyWith(fontFamily: fontName),
       button: base.button.copyWith(fontFamily: fontName),
       caption: base.caption.copyWith(fontFamily: fontName),
-      bodyText1: base.bodyText1.copyWith(fontFamily: fontName),
-      bodyText2: base.bodyText2.copyWith(fontFamily: fontName),
-      subtitle1: base.subtitle1.copyWith(fontFamily: fontName),
-      subtitle2: base.subtitle2.copyWith(fontFamily: fontName),
+      body2: base.body2.copyWith(fontFamily: fontName),
+      body1: base.body1.copyWith(fontFamily: fontName),
+      subtitle: base.subtitle.copyWith(fontFamily: fontName),
+      //subtitle: base.subtitle.copyWith(fontFamily: fontName),
       overline: base.overline.copyWith(fontFamily: fontName),
     );
+
   }
+  
 
   static ThemeData buildLightTheme() {
     final Color primaryColor = HexColor('#54D3C2');

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show Color, FontWeight, TextStyle, TextTheme;
 
 class DesignCourseAppTheme {
   DesignCourseAppTheme._();
@@ -19,12 +19,12 @@ class DesignCourseAppTheme {
   static const Color spacer = Color(0xFFF2F2F2);
 
   static const TextTheme textTheme = TextTheme(
-    headline4: display1,
-    headline5: headline,
-    headline6: title,
-    subtitle2: subtitle,
-    bodyText1: body2,
-    bodyText2: body1,
+    //headline4: display1,
+    headline: headline,
+    //headline: title,
+    subtitle: subtitle,
+    body1: body2,
+    body2: body1,
     caption: caption,
   );
 

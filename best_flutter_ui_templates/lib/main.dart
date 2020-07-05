@@ -25,9 +25,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter UI',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.amber,
+        primaryColor: Colors.amber,
         textTheme: AppTheme.textTheme,
-        platform: TargetPlatform.iOS,
+        //platform: TargetPlatform.iOS,
       ),
       home: NavigationHomeScreen(),
     );

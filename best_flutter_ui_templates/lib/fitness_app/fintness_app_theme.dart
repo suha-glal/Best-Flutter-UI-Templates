@@ -19,7 +19,7 @@ class FintnessAppTheme {
   static const Color dismissibleBackground = Color(0xFF364A54);
   static const Color spacer = Color(0xFFF2F2F2);
   static const String fontName = 'Roboto';
-
+/*
   static const TextTheme textTheme = TextTheme(
     headline4: display1,
     headline5: headline,
@@ -29,7 +29,16 @@ class FintnessAppTheme {
     bodyText1: body1,
     caption: caption,
   );
-
+*/
+static const TextTheme textTheme = TextTheme(
+    //headline4: display1,
+    headline: headline,
+    //headline: title,
+    subtitle: subtitle,
+    body1: body2,
+    body2: body1,
+    caption: caption,
+  );
   static const TextStyle display1 = TextStyle(
     fontFamily: fontName,
     fontWeight: FontWeight.bold,
