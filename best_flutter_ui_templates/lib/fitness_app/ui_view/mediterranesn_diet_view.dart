@@ -58,7 +58,7 @@ class MediterranesnDietView extends StatelessWidget {
                                         height: 48,
                                         width: 2,
                                         decoration: BoxDecoration(
-                                          color: HexColor('#87A0E5')
+                                          color: FintnessAppTheme.nearlyBlue//HexColor('#87A0E5')
                                               .withOpacity(0.5),
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(4.0)),

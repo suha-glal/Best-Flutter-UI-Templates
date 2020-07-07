@@ -12,7 +12,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   List<HomeList> homeList = HomeList.homeList;
   AnimationController animationController;
-  bool multiple = true;
+  bool multiple = false;
 
   @override
   void initState() {
@@ -43,10 +43,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             return const SizedBox();
           } else {
             return Padding(
-              padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+             padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,//.start,
                 children: <Widget>[
                   appBar(),
                   Expanded(
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                               crossAxisCount: multiple ? 2 : 1,
                               mainAxisSpacing: 12.0,
                               crossAxisSpacing: 12.0,
-                              childAspectRatio: 1.5,
+                              childAspectRatio: 2.5,
                             ),
                           );
                         }
@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               child: Padding(
                 padding: const EdgeInsets.only(top: 4),
                 child: Text(
-                  'Flutter UI',
+                  'Home',
                   style: TextStyle(
                     fontSize: 22,
                     color: AppTheme.darkText,
@@ -152,7 +152,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   borderRadius:
                       BorderRadius.circular(AppBar().preferredSize.height),
                   child: Icon(
-                    multiple ? Icons.dashboard : Icons.view_agenda,
+                    multiple ?  Icons.dashboard:Icons.view_agenda,
                     color: AppTheme.dark_grey,
                   ),
                   onTap: () {
@@ -196,15 +196,11 @@ class HomeListView extends StatelessWidget {
                 0.0, 50 * (1.0 - animation.value), 0.0),
             child: AspectRatio(
               aspectRatio: 1.5,
-              child: ClipRRect(
-                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
-                child: Stack(
+              child: Stack(
                   alignment: AlignmentDirectional.center,
                   children: <Widget>[
-                    Image.asset(
                       listData.imagePath,
-                      fit: BoxFit.cover,
-                    ),
+                    
                     Material(
                       color: Colors.transparent,
                       child: InkWell(
@@ -216,9 +212,11 @@ class HomeListView extends StatelessWidget {
                         },
                       ),
                     ),
+
+                
                   ],
                 ),
-              ),
+            //  ),
             ),
           ),
         );

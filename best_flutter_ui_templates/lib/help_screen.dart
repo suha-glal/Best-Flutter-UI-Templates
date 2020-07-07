@@ -19,6 +19,15 @@ class _HelpScreenState extends State<HelpScreen> {
       child: SafeArea(
         top: false,
         child: Scaffold(
+          appBar: AppBar(centerTitle: true, title: Text(
+              'Support',
+              style: TextStyle(
+                fontSize: 22,
+                color: AppTheme.darkText,
+                fontWeight: FontWeight.w700,
+              )),
+              backgroundColor:Colors.grey[300]
+          ),
           backgroundColor: AppTheme.nearlyWhite,
           body: Column(
             children: <Widget>[
@@ -27,7 +36,7 @@ class _HelpScreenState extends State<HelpScreen> {
                     top: MediaQuery.of(context).padding.top,
                     left: 16,
                     right: 16),
-                child: Image.asset('assets/images/helpImage.png'),
+                child: Image.asset('assets/images/supports.png'),//helpImage
               ),
               Container(
                 padding: const EdgeInsets.only(top: 8),
@@ -57,7 +66,7 @@ class _HelpScreenState extends State<HelpScreen> {
                       width: 140,
                       height: 40,
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: AppTheme.main_color,
                         borderRadius:
                             const BorderRadius.all(Radius.circular(4.0)),
                         boxShadow: <BoxShadow>[

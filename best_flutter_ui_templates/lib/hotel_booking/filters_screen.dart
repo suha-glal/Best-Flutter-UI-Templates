@@ -104,7 +104,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
           padding:
               const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 8),
           child: Text(
-            'Type of Accommodation',
+            'Type of Insurance Cover',
             textAlign: TextAlign.left,
             style: TextStyle(
                 color: Colors.grey,
@@ -251,7 +251,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
             textAlign: TextAlign.left,
             style: TextStyle(
                 color: Colors.grey,
-                fontSize: MediaQuery.of(context).size.width > 360 ? 18 : 16,
+                fontSize: MediaQuery.of(context).size.width > 360 ? 16 : 14,
                 fontWeight: FontWeight.normal),
           ),
         ),
@@ -338,7 +338,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
         Padding(
           padding: const EdgeInsets.all(16.0),
           child: Text(
-            'Price (for 1 night)',
+            'Price (AED)',
             textAlign: TextAlign.left,
             style: TextStyle(
                 color: Colors.grey,

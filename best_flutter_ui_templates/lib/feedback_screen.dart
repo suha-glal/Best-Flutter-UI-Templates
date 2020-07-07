@@ -18,7 +18,15 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
       color: AppTheme.nearlyWhite,
       child: SafeArea(
         top: false,
-        child: Scaffold(
+        child: Scaffold(appBar: AppBar(centerTitle: true, title: Text(
+        'Feedback',
+        style: TextStyle(
+        fontSize: 22,
+        color: AppTheme.darkText,
+        fontWeight: FontWeight.w700,
+    )),
+            backgroundColor:Colors.grey[300]
+        ),
           backgroundColor: AppTheme.nearlyWhite,
           body: SingleChildScrollView(
             child: SizedBox(
@@ -30,7 +38,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                         top: MediaQuery.of(context).padding.top,
                         left: 16,
                         right: 16),
-                    child: Image.asset('assets/images/feedbackImage.png'),
+                    child: Image.asset('assets/images/feedbacks.png',),//feedbackImage
                   ),
                   Container(
                     padding: const EdgeInsets.only(top: 8),
@@ -60,7 +68,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                         width: 120,
                         height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.blue,
+                          color: AppTheme.main_color,
                           borderRadius:
                               const BorderRadius.all(Radius.circular(4.0)),
                           boxShadow: <BoxShadow>[
@@ -133,7 +141,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                   fontSize: 16,
                   color: AppTheme.dark_grey,
                 ),
-                cursorColor: Colors.blue,
+                cursorColor: AppTheme.main_color,
                 decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: 'Enter your feedback...'),

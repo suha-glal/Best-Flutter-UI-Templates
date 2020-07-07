@@ -35,6 +35,14 @@ class _MyProfilePageState extends State<MyProfilePage> with TickerProviderStateM
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(centerTitle:true, title:Text(
+        'Profile',
+        style: TextStyle(
+        fontSize: 22,
+        color: AppTheme.darkText,
+        fontWeight: FontWeight.w700,
+    )),
+    backgroundColor:Colors.grey[300]), //appBar(),
       backgroundColor: AppTheme.white,
       body: FutureBuilder<bool>(
         future: getData(),
@@ -48,7 +56,7 @@ class _MyProfilePageState extends State<MyProfilePage> with TickerProviderStateM
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  appBar(),
+                  //appBar(),
               Expanded(child:
                   FutureBuilder<bool>(
                       future: getData(),
@@ -96,6 +104,7 @@ class _MyProfilePageState extends State<MyProfilePage> with TickerProviderStateM
 
   Widget appBar() {
     return SizedBox(
+
       height: AppBar().preferredSize.height,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -103,6 +112,7 @@ class _MyProfilePageState extends State<MyProfilePage> with TickerProviderStateM
           Padding(
             padding: const EdgeInsets.only(top: 8, left: 8),
             child: Container(
+              color: Colors.grey[300],
               width: AppBar().preferredSize.height - 8,
               height: AppBar().preferredSize.height - 8,
             ),

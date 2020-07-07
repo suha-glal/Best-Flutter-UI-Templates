@@ -10,27 +10,33 @@ import '../app_theme.dart';
 class AboutUs {
   AboutUs({
     this.itemDescription,
-    this.itemTextInput,
-    this.profileItemIcon,
   });
 
   Widget itemDescription;
-  Widget itemTextInput;
-  Icon profileItemIcon;
-
+ 
   static List<AboutUs> profileList = [
     AboutUs(itemDescription: coverImage()),
     //AboutUs(itemDescription:SizedBox(height: double.infinity/ 6.4)),
     AboutUs(itemDescription: profileImage()),
     AboutUs(itemDescription: _buildFullName()),
-
-    AboutUs(itemDescription: _buildDetails())
-    // AboutUs(itemDescription:
-    //AboutUs(itemDescription:
-    //AboutUs(itemDescription:
+    //AboutUs(itemDescription: buildAboutUsDetails() ),
+   /*
+     AboutUs(itemDescription:),
+   AboutUs(itemDescription:  Container(
+  padding: const EdgeInsets.all(8),
+  child: const Text("Who we are?",style: AppTheme.profileCategory,),
+  //  color: Colors.green[100],
+  ),),*/
+   // AboutUs(itemDescription:
   ];
 }
-
+buildDivder() {
+  return Positioned(
+      top: 0,
+      child: Divider(height: 2, color: AppTheme.grey.withOpacity(0.6),
+      ),
+  );
+}
 coverImage() {
   return Container(
     height: 125,
@@ -50,14 +56,14 @@ profileImage() {
       showTwoGlows: true,
       child: CircleAvatar(
 
-        backgroundColor: Colors.grey[100],
-        backgroundImage: AssetImage('assets/images/ashraf.png'),
+        backgroundColor: Colors.grey[50],
+        backgroundImage: AssetImage('assets/images/crooz.png',),
         radius: 50,
         child: Container(
           // width: 140.0,
          //alignment:AlignmentDirectional.center ,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50.0),
+            borderRadius: BorderRadius.circular(70.0),
             border: Border.all(
               color: Colors.white,
               width: 3.0,
@@ -69,79 +75,69 @@ profileImage() {
   );
 }
 
-Widget _buildDetails() {
-  return Container(
-    alignment: Alignment.bottomLeft,
-     
-    child: Column(
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.start,
+Widget buildAboutUsDetails() {
+  return /*CustomScrollView(
+    slivers: [
+      SliverFillRemaining(
+        hasScrollBody: true,
+        child:*/ Positioned(
+      top:50.0,
+
+      child:Column(
+
         children: <Widget>[
-          SizedBox(
-            height: 200,
-          ),
+         /* SizedBox(
+            height: 100,
+          ),*/
           Divider(height: 2, color: AppTheme.grey.withOpacity(0.6)),
-          /* buildDetailForItem('First Name:', 'Ashraf'),
-      buildDetailForItem('Last Name:', 'Khalil'),
-      buildDetailForItem('Company:', 'Crooz LLC'),
-      buildDetailForItem('Registration Date:', '1/1/2020'),*/
-          /*CustomScrollView(
-            primary: false,
-            slivers: <Widget>[
-              SliverPadding(
-                padding: const EdgeInsets.all(20),
-                sliver: SliverGrid.count(
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  crossAxisCount: 2,
-                  children: <Widget>[*/
+
                     Container(
                       padding: const EdgeInsets.all(8),
-                      child: const Text("First Name:",style: AppTheme.profileCategory,),
+                      child: const Text("Who we are?",style: AppTheme.profileCategory,),
                     //  color: Colors.green[100],
                     ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Telematics APP for Urban Transportation, Insurance, Market research companies, and others'),
+            //color: Colors.green[400],
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('What we do?',style: AppTheme.profileCategory,),
+            //color: Colors.green[300],
+          ),
                     Container(
                       padding: const EdgeInsets.all(8),
-                      child: const Text('Ashraf'),
+                      child: const Text('We provide smartphone telematics solutions which enables you to leverage customer behaviors data in order to engage better motor insurance portfolio, build targeted communications with customers, cross-sell and up-sell based on customer preferences and needs as well as provide customers with a new experience of having smart insurance products like UBI, on-demand, contextual and other advanced insurance products.'),
                      // color: Colors.green[200],
                     ),
+
+
                     Container(
                       padding: const EdgeInsets.all(8),
-                      child: const Text('Last Name:',style: AppTheme.profileCategory,),
-                      //color: Colors.green[300],
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      child: const Text('Khalil'),
-                      //color: Colors.green[400],
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      child: const Text('Company:',style: AppTheme.profileCategory,),
+                      child: const Text('How we do it?',style: AppTheme.profileCategory,),
                     //  color: Colors.green[500],
                     ),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      child: const Text('Crooz .LLC'),
-                   //   color: Colors.green[600],
-                    ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            child: const Text('Registration Date:', style: AppTheme.profileCategory,),
-            //  color: Colors.green[500],
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            child: const Text('12/06/2010',style: AppTheme.body2),
-            //   color: Colors.green[600],
-          ),
-                 // ],
-               // ),
-             // ),
-            ],
-          ),
+                   // ListView(
+                     //fit: FlexFit.tight,
+                      //padding: const EdgeInsets.all(8),
+                      /*child: Row(children: <Widget>[const */Text('1. We use advanced algorithms to minimal reliance on GPS to extensively reduce battery drain.',style: AppTheme.body2),
+                      Text('2. Fully autonomus SDK to collect telematics data. All processes runs in background mode.',style: AppTheme.body2),
+                        Text('3. We analyze driving behavior patterns and calculate overall risk level as well as daily performance.',style: AppTheme.body2),
+                        Text('4. AI Algorithms that provide drivers with tailored recommendations to give driving style safer.',style: AppTheme.body2),
+                        Text('5. Get access to life-style analysis as well as mode of car usage to better understand your customers.',style: AppTheme.body2),
+                      ],
+                    // )
 
+                  )
   );
+
+
+
+ // ),
+
+//],
+//  );
 }
 
 Widget _buildFullName() {
@@ -159,32 +155,10 @@ Widget _buildFullName() {
     alignment: Alignment.bottomCenter,
     height: 200.0,
     child: Text(
-      _fullName,
+     'Crooz',
       style: _nameTextStyle,
     ),
     // ),
   );
 }
 
-Widget buildDetailForItem(String title, String detail) {
-  return Row(
-    children: <Widget>[
-      Text(
-        title,
-        style: TextStyle(
-          color: AppTheme.dark_grey.withOpacity(0.7),
-          fontSize: 18.0,
-          fontWeight: FontWeight.w100,
-        ),
-      ),
-      SizedBox(height: 10, width: 10),
-      Text(
-        detail,
-        style: TextStyle(
-          color: AppTheme.lightText.withOpacity(0.8),
-          fontSize: 15.0,
-        ),
-      ),
-    ],
-  );
-}

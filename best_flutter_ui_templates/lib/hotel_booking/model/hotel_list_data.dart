@@ -1,12 +1,12 @@
-class HotelListData {
-  HotelListData({
+class ServiceListData {
+  ServiceListData({
     this.imagePath = '',
     this.titleTxt = '',
     this.subTxt = "",
     this.dist = 1.8,
     this.reviews = 80,
     this.rating = 4.5,
-    this.perNight = 180,
+    this.price = 180,
   });
 
   String imagePath;
@@ -15,53 +15,53 @@ class HotelListData {
   double dist;
   double rating;
   int reviews;
-  int perNight;
+  int price;
 
-  static List<HotelListData> hotelList = <HotelListData>[
-    HotelListData(
-      imagePath: 'assets/hotel/hotel_1.png',
-      titleTxt: 'Grand Royal Hotel',
-      subTxt: 'Wembley, London',
+  static List<ServiceListData> serviceList = <ServiceListData>[
+    ServiceListData(
+      imagePath: 'assets/service/service_1.png',
+      titleTxt: 'Oman Insurance Company',
+      subTxt: 'Abu Dhabi',
       dist: 2.0,
       reviews: 80,
       rating: 4.4,
-      perNight: 180,
+      price: 180,
     ),
-    HotelListData(
-      imagePath: 'assets/hotel/hotel_2.png',
-      titleTxt: 'Queen Hotel',
-      subTxt: 'Wembley, London',
+    ServiceListData(
+      imagePath: 'assets/service/service_2.png',
+      titleTxt: 'Emirates Insurance',
+      subTxt: 'Dubai',
       dist: 4.0,
       reviews: 74,
       rating: 4.5,
-      perNight: 200,
+      price: 200,
     ),
-    HotelListData(
-      imagePath: 'assets/hotel/hotel_3.png',
-      titleTxt: 'Grand Royal Hotel',
-      subTxt: 'Wembley, London',
+    ServiceListData(
+      imagePath: 'assets/service/service_3.gif',
+      titleTxt: 'Union Insurance',
+      subTxt: 'Al Ain',
       dist: 3.0,
       reviews: 62,
       rating: 4.0,
-      perNight: 60,
+      price: 60,
     ),
-    HotelListData(
-      imagePath: 'assets/hotel/hotel_4.png',
-      titleTxt: 'Queen Hotel',
-      subTxt: 'Wembley, London',
+    ServiceListData(
+      imagePath: 'assets/service/service_4.jpg',
+      titleTxt: 'Orient Insurance',
+      subTxt: 'Al Sharjah',
       dist: 7.0,
       reviews: 90,
       rating: 4.4,
-      perNight: 170,
+      price: 170,
     ),
-    HotelListData(
-      imagePath: 'assets/hotel/hotel_5.png',
-      titleTxt: 'Grand Royal Hotel',
-      subTxt: 'Wembley, London',
+    ServiceListData(
+      imagePath: 'assets/service/service_5.png',
+      titleTxt: 'AD National Insurance co.',
+      subTxt: 'Ajman',
       dist: 2.0,
       reviews: 240,
       rating: 4.5,
-      perNight: 200,
+      price: 200,
     ),
   ];
 }

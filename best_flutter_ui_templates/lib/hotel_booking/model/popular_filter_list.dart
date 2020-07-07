@@ -9,23 +9,25 @@ class PopularFilterListData {
 
   static List<PopularFilterListData> popularFList = <PopularFilterListData>[
     PopularFilterListData(
-      titleTxt: 'Free Breakfast',
+      titleTxt: 'Simple claims',
       isSelected: false,
     ),
     PopularFilterListData(
-      titleTxt: 'Free Parking',
-      isSelected: false,
-    ),
-    PopularFilterListData(
-      titleTxt: 'Pool',
+      titleTxt: 'Digital Support',
       isSelected: true,
     ),
     PopularFilterListData(
-      titleTxt: 'Pet Friendly',
+      titleTxt: 'Roadside Help',
       isSelected: false,
     ),
+
     PopularFilterListData(
-      titleTxt: 'Free wifi',
+      titleTxt: 'Agency Repair',
+      isSelected: false,
+    ),
+
+    PopularFilterListData(
+      titleTxt: 'Quick Quotations',
       isSelected: false,
     ),
   ];
@@ -36,24 +38,24 @@ class PopularFilterListData {
       isSelected: false,
     ),
     PopularFilterListData(
-      titleTxt: 'Apartment',
+      titleTxt: 'Comprehensive',
       isSelected: false,
     ),
     PopularFilterListData(
-      titleTxt: 'Home',
+      titleTxt: 'Third Party Only',
       isSelected: true,
     ),
     PopularFilterListData(
-      titleTxt: 'Villa',
+      titleTxt: 'High Net Worth Cover',
       isSelected: false,
     ),
     PopularFilterListData(
-      titleTxt: 'Hotel',
+      titleTxt: 'Custom',
       isSelected: false,
     ),
-    PopularFilterListData(
+   /* PopularFilterListData(
       titleTxt: 'Resort',
       isSelected: false,
-    ),
+    ),*/
   ];
 }

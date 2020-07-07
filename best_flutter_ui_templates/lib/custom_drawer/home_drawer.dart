@@ -1,5 +1,6 @@
 import 'package:best_flutter_ui_templates/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeDrawer extends StatefulWidget {
   const HomeDrawer({Key key, this.screenIndex, this.iconAnimationController, this.callBackIndex}) : super(key: key);
@@ -28,8 +29,16 @@ class _HomeDrawerState extends State<HomeDrawer> {
         icon: Icon(Icons.home),
       ),
       DrawerList(
+        index: DrawerIndex.Profile,
+        labelName: 'Profile',
+        icon: Icon(Icons.face),
+        //isAssetsImage: true,
+        //imageName: 'assets/images/supportIcon.png',
+      ),
+      DrawerList(
         index: DrawerIndex.Help,
         labelName: 'Help',
+       // icon:Icon(Icons.portrait),
         isAssetsImage: true,
         imageName: 'assets/images/supportIcon.png',
       ),
@@ -38,7 +47,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
         labelName: 'FeedBack',
         icon: Icon(Icons.help),
       ),
-      DrawerList(
+      /*DrawerList(
         index: DrawerIndex.Invite,
         labelName: 'Invite Friend',
         icon: Icon(Icons.group),
@@ -47,7 +56,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
         index: DrawerIndex.Share,
         labelName: 'Rate the app',
         icon: Icon(Icons.share),
-      ),
+      ),*/
       DrawerList(
         index: DrawerIndex.About,
         labelName: 'About Us',
@@ -104,7 +113,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                   Padding(
                     padding: const EdgeInsets.only(top: 8, left: 4),
                     child: Text(
-                      'Chris Hemsworth',
+                      'Ashraf Khalil',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         color: AppTheme.grey,
@@ -186,7 +195,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                     height: 46.0,
                     // decoration: BoxDecoration(
                     //   color: widget.screenIndex == listData.index
-                    //       ? Colors.blue
+                    //       ? AppTheme.main_color
                     //       : Colors.transparent,
                     //   borderRadius: new BorderRadius.only(
                     //     topLeft: Radius.circular(0),
@@ -203,9 +212,9 @@ class _HomeDrawerState extends State<HomeDrawer> {
                       ? Container(
                           width: 24,
                           height: 24,
-                          child: Image.asset(listData.imageName, color: widget.screenIndex == listData.index ? Colors.blue : AppTheme.nearlyBlack),
+                          child: Image.asset(listData.imageName, color: widget.screenIndex == listData.index ? AppTheme.main_color : AppTheme.nearlyBlack),
                         )
-                      : Icon(listData.icon.icon, color: widget.screenIndex == listData.index ? Colors.blue : AppTheme.nearlyBlack),
+                      : Icon(listData.icon.icon, color: widget.screenIndex == listData.index ? AppTheme.main_color: AppTheme.nearlyBlack),
                   const Padding(
                     padding: EdgeInsets.all(4.0),
                   ),
@@ -214,7 +223,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
-                      color: widget.screenIndex == listData.index ? Colors.blue : AppTheme.nearlyBlack,
+                      color: widget.screenIndex == listData.index ? AppTheme.main_color : AppTheme.nearlyBlack,
                     ),
                     textAlign: TextAlign.left,
                   ),
@@ -234,7 +243,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                             width: MediaQuery.of(context).size.width * 0.75 - 64,
                             height: 46,
                             decoration: BoxDecoration(
-                              color: Colors.blue.withOpacity(0.2),
+                              color: AppTheme.main_color.withOpacity(0.2),
                               borderRadius: new BorderRadius.only(
                                 topLeft: Radius.circular(0),
                                 topRight: Radius.circular(28),
@@ -261,6 +270,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
 
 enum DrawerIndex {
   HOME,
+  Profile,
   FeedBack,
   Help,
   Share,

@@ -43,7 +43,7 @@ class _BottomBarViewState extends State<BottomBarView>
           builder: (BuildContext context, Widget child) {
             return Transform(
               transform: Matrix4.translationValues(0.0, 0.0, 0.0),
-              child: PhysicalShape(
+              child:PhysicalShape(
                 color: FintnessAppTheme.white,
                 elevation: 16.0,
                 clipper: TabClipper(
@@ -52,7 +52,7 @@ class _BottomBarViewState extends State<BottomBarView>
                                 parent: animationController,
                                 curve: Curves.fastOutSlowIn))
                             .value *
-                        38.0),
+                        55.0),
                 child: Column(
                   children: <Widget>[
                     SizedBox(
@@ -119,7 +119,7 @@ class _BottomBarViewState extends State<BottomBarView>
             );
           },
         ),
-        Padding(
+      /*  Padding(
           padding:
               EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom),
           child: SizedBox(
@@ -146,7 +146,8 @@ class _BottomBarViewState extends State<BottomBarView>
                         gradient: LinearGradient(
                             colors: [
                               FintnessAppTheme.nearlyDarkBlue,
-                              HexColor('#6A88E5'),
+                              FintnessAppTheme.nearlyBlue,
+                             // HexColor('#6A88E5'),
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight),
@@ -181,7 +182,7 @@ class _BottomBarViewState extends State<BottomBarView>
               ),
             ),
           ),
-        ),
+        ),*/
       ],
     );
   }

@@ -26,7 +26,8 @@ class WorkoutView extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(colors: [
                     FintnessAppTheme.nearlyDarkBlue,
-                    HexColor("#6F56E8")
+                    FintnessAppTheme.nearlyBlue
+                    //HexColor("#6F56E8")
                   ], begin: Alignment.topLeft, end: Alignment.bottomRight),
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(8.0),

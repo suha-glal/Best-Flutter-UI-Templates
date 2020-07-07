@@ -16,7 +16,7 @@ class HotelHomeScreen extends StatefulWidget {
 class _HotelHomeScreenState extends State<HotelHomeScreen>
     with TickerProviderStateMixin {
   AnimationController animationController;
-  List<HotelListData> hotelList = HotelListData.hotelList;
+  List<ServiceListData> serviceList = ServiceListData.serviceList;
   final ScrollController _scrollController = ScrollController();
 
   DateTime startDate = DateTime.now();
@@ -71,7 +71,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                 return Column(
                                   children: <Widget>[
                                     getSearchBarUI(),
-                                    getTimeDateUI(),
+                                    //getTimeDateUI(),
                                   ],
                                 );
                               }, childCount: 1),
@@ -89,12 +89,12 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                           color:
                               HotelAppTheme.buildLightTheme().backgroundColor,
                           child: ListView.builder(
-                            itemCount: hotelList.length,
+                            itemCount: serviceList.length,
                             padding: const EdgeInsets.only(top: 8),
                             scrollDirection: Axis.vertical,
                             itemBuilder: (BuildContext context, int index) {
                               final int count =
-                                  hotelList.length > 10 ? 10 : hotelList.length;
+                              serviceList.length > 10 ? 10 : serviceList.length;
                               final Animation<double> animation =
                                   Tween<double>(begin: 0.0, end: 1.0).animate(
                                       CurvedAnimation(
@@ -105,7 +105,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                               animationController.forward();
                               return HotelListView(
                                 callback: () {},
-                                hotelData: hotelList[index],
+                                hotelData: serviceList[index],
                                 animation: animation,
                                 animationController: animationController,
                               );
@@ -146,11 +146,11 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                   return const SizedBox();
                 } else {
                   return ListView.builder(
-                    itemCount: hotelList.length,
+                    itemCount: serviceList.length,
                     scrollDirection: Axis.vertical,
                     itemBuilder: (BuildContext context, int index) {
                       final int count =
-                          hotelList.length > 10 ? 10 : hotelList.length;
+                      serviceList.length > 10 ? 10 : serviceList.length;
                       final Animation<double> animation =
                           Tween<double>(begin: 0.0, end: 1.0).animate(
                               CurvedAnimation(
@@ -161,7 +161,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
 
                       return HotelListView(
                         callback: () {},
-                        hotelData: hotelList[index],
+                        hotelData: serviceList[index],
                         animation: animation,
                         animationController: animationController,
                       );
@@ -178,8 +178,8 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
 
   Widget getHotelViewList() {
     final List<Widget> hotelListViews = <Widget>[];
-    for (int i = 0; i < hotelList.length; i++) {
-      final int count = hotelList.length;
+    for (int i = 0; i < serviceList.length; i++) {
+      final int count = serviceList.length;
       final Animation<double> animation =
           Tween<double>(begin: 0.0, end: 1.0).animate(
         CurvedAnimation(
@@ -190,7 +190,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
       hotelListViews.add(
         HotelListView(
           callback: () {},
-          hotelData: hotelList[i],
+          hotelData: serviceList[i],
           animation: animation,
           animationController: animationController,
         ),
@@ -202,7 +202,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
     );
   }
 
-  Widget getTimeDateUI() {
+  /*Widget getTimeDateUI() {
     return Padding(
       padding: const EdgeInsets.only(left: 18, bottom: 16),
       child: Row(
@@ -319,7 +319,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
       ),
     );
   }
-
+*/
   Widget getSearchBarUI() {
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
@@ -352,7 +352,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                     cursorColor: HotelAppTheme.buildLightTheme().primaryColor,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: 'London...',
+                      hintText: 'Abu Dhabi...',
                     ),
                   ),
                 ),
@@ -426,7 +426,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      '530 hotels found',
+                      '5 services found',
                       style: TextStyle(
                         fontWeight: FontWeight.w100,
                         fontSize: 16,

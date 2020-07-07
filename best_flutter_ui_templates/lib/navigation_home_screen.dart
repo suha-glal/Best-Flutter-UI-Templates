@@ -5,7 +5,11 @@ import 'package:best_flutter_ui_templates/feedback_screen.dart';
 import 'package:best_flutter_ui_templates/help_screen.dart';
 import 'package:best_flutter_ui_templates/home_screen.dart';
 import 'package:best_flutter_ui_templates/invite_friend_screen.dart';
+import 'package:best_flutter_ui_templates/about_screen.dart';
+import 'package:best_flutter_ui_templates/profile_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'fitness_app/fitness_app_home_screen.dart';
 
 class NavigationHomeScreen extends StatefulWidget {
   @override
@@ -19,7 +23,7 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
   @override
   void initState() {
     drawerIndex = DrawerIndex.HOME;
-    screenView = const MyHomePage();
+    screenView = FitnessAppHomeScreen();
     super.initState();
   }
 
@@ -52,7 +56,11 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
       drawerIndex = drawerIndexdata;
       if (drawerIndex == DrawerIndex.HOME) {
         setState(() {
-          screenView = const MyHomePage();
+          screenView =FitnessAppHomeScreen();// const MyHomePage();
+        });
+      } else if (drawerIndex == DrawerIndex.Profile) {
+        setState(() {
+          screenView = MyProfilePage();
         });
       } else if (drawerIndex == DrawerIndex.Help) {
         setState(() {
@@ -62,9 +70,9 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
         setState(() {
           screenView = FeedbackScreen();
         });
-      } else if (drawerIndex == DrawerIndex.Invite) {
+      } else if (drawerIndex == DrawerIndex.About) {
         setState(() {
-          screenView = InviteFriend();
+          screenView = AboutUsPage();
         });
       } else {
         //do in your way......

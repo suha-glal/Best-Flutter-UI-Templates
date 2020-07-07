@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class AppTheme {
   AppTheme._();
 
+//#A6ACAC
+  static const Color main_color=Color(0xFF00B8BA);
   static const Color notWhite = Color(0xFFEDF0F2);
   static const Color nearlyWhite = Color(0xFFFEFEFE);
   static const Color white = Color(0xFFFFFFFF);
@@ -84,6 +86,13 @@ class AppTheme {
     fontSize: 12,
     letterSpacing: 0.2,
     color: lightText, // was lightText
+  );
+  static const TextStyle profileCategory = TextStyle( // Caption -> caption
+    fontFamily: fontName,
+    fontWeight: FontWeight.bold,
+    fontSize: 16,
+    letterSpacing: 0.3,
+    color: Colors.grey, // was lightText
   );
 
 }

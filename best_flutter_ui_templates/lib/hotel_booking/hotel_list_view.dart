@@ -15,7 +15,7 @@ class HotelListView extends StatelessWidget {
       : super(key: key);
 
   final VoidCallback callback;
-  final HotelListData hotelData;
+  final ServiceListData hotelData;
   final AnimationController animationController;
   final Animation<dynamic> animation;
 
@@ -165,15 +165,15 @@ class HotelListView extends StatelessWidget {
                                           CrossAxisAlignment.end,
                                       children: <Widget>[
                                         Text(
-                                          '\$${hotelData.perNight}',
+                                          '${hotelData.price} AED',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 22,
+                                            fontSize: 21,
                                           ),
                                         ),
                                         Text(
-                                          '/per night',
+                                          'start price',
                                           style: TextStyle(
                                               fontSize: 14,
                                               color:
