@@ -47,9 +47,9 @@ class BodyMeasurementView extends StatelessWidget {
                         children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.only(
-                                left: 4, bottom: 8, top: 16),
+                                left: 4, bottom: 0, top: 16),
                             child: Text(
-                              'Weight',
+                              'Distance',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   fontFamily: FintnessAppTheme.fontName,
@@ -71,7 +71,7 @@ class BodyMeasurementView extends StatelessWidget {
                                     padding: const EdgeInsets.only(
                                         left: 4, bottom: 3),
                                     child: Text(
-                                      '206.8',
+                                      '24',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         fontFamily: FintnessAppTheme.fontName,
@@ -85,7 +85,7 @@ class BodyMeasurementView extends StatelessWidget {
                                     padding: const EdgeInsets.only(
                                         left: 8, bottom: 8),
                                     child: Text(
-                                      'Ibs',
+                                      'km',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         fontFamily: FintnessAppTheme.fontName,
@@ -100,10 +100,10 @@ class BodyMeasurementView extends StatelessWidget {
                               ),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
                                       Icon(
                                         Icons.access_time,
@@ -111,12 +111,13 @@ class BodyMeasurementView extends StatelessWidget {
                                             .withOpacity(0.5),
                                         size: 16,
                                       ),
+
                                       Padding(
                                         padding:
                                             const EdgeInsets.only(left: 4.0),
                                         child: Text(
-                                          'Today 8:26 AM',
-                                          textAlign: TextAlign.center,
+                                          'Today',
+                                          textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontFamily:
                                                 FintnessAppTheme.fontName,
@@ -130,11 +131,19 @@ class BodyMeasurementView extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  Padding(
+                                      Padding(
                                     padding: const EdgeInsets.only(
-                                        top: 4, bottom: 14),
-                                    child: Text(
-                                      'InBody SmartScale',
+                                        top: 8, bottom: 14),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children:<Widget>[ Icon(
+                                      Icons.adjust,
+                                      color: FintnessAppTheme.yellow
+                                          .withOpacity(0.5),
+                                      size: 16,
+                                    ),
+                                        Text(
+                                      'Start: ',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         fontFamily: FintnessAppTheme.fontName,
@@ -144,7 +153,81 @@ class BodyMeasurementView extends StatelessWidget {
                                         color: FintnessAppTheme.nearlyDarkBlue,
                                       ),
                                     ),
+
+                                      Text(
+                                          '8:26 AM ',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontFamily: FintnessAppTheme.fontName,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 11,
+                                            letterSpacing: 0.0,
+                                            color: FintnessAppTheme.grey.withOpacity(0.5),
+                                          ),
+                                        ),
+                                        Text(
+                                          ' | Al Ain, Al Daher',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              fontFamily: FintnessAppTheme.fontName,
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 11,
+                                              letterSpacing: 0.0,
+                                              color: FintnessAppTheme.lightText
+                                          ),
+                                        ),
+                                        ],
+                                      ),
+                                    ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 0, bottom: 14),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children:<Widget>[ Icon(
+                                        Icons.assistant_photo,
+                                        color: FintnessAppTheme.yellow
+                                            .withOpacity(0.5),
+                                        size: 16,
+                                      ),
+                                        Text(
+                                          'End:   ',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontFamily: FintnessAppTheme.fontName,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 11,
+                                            letterSpacing: 0.0,
+                                            color: FintnessAppTheme.nearlyDarkBlue,
+                                          ),
+                                        ),
+
+                                        Text(
+                                          '9:06 AM ',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontFamily: FintnessAppTheme.fontName,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 11,
+                                            letterSpacing: 0.0,
+                                            color: FintnessAppTheme.grey.withOpacity(0.5),
+                                          ),
+                                        ),
+                                        Text(
+                                          ' | Al Ain, Al Jimi',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontFamily: FintnessAppTheme.fontName,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 11,
+                                            letterSpacing: 0.0,
+                                            color: FintnessAppTheme.lightText
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
+
                                 ],
                               )
                             ],
@@ -174,7 +257,7 @@ class BodyMeasurementView extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  '185 cm',
+                                  '20 min',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontFamily: FintnessAppTheme.fontName,
@@ -187,7 +270,7 @@ class BodyMeasurementView extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 6),
                                   child: Text(
-                                    'Height',
+                                    'Duration',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontFamily: FintnessAppTheme.fontName,
@@ -211,7 +294,7 @@ class BodyMeasurementView extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: <Widget>[
                                     Text(
-                                      '27.3 BMI',
+                                      '100 km/hr',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
                                         fontFamily: FintnessAppTheme.fontName,
@@ -224,7 +307,7 @@ class BodyMeasurementView extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.only(top: 6),
                                       child: Text(
-                                        'Overweight',
+                                        'Avg Speed',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                           fontFamily: FintnessAppTheme.fontName,
@@ -250,7 +333,7 @@ class BodyMeasurementView extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: <Widget>[
                                     Text(
-                                      '20%',
+                                      '80%',
                                       style: TextStyle(
                                         fontFamily: FintnessAppTheme.fontName,
                                         fontWeight: FontWeight.w500,
@@ -262,7 +345,7 @@ class BodyMeasurementView extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.only(top: 6),
                                       child: Text(
-                                        'Body fat',
+                                        'Saftey Score',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                           fontFamily: FintnessAppTheme.fontName,

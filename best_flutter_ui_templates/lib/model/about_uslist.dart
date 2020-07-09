@@ -57,7 +57,7 @@ profileImage() {
       child: CircleAvatar(
 
         backgroundColor: Colors.grey[50],
-        backgroundImage: AssetImage('assets/images/crooz.png',),
+        backgroundImage: AssetImage('assets/images/croozlogo3.png',),
         radius: 50,
         child: Container(
           // width: 140.0,

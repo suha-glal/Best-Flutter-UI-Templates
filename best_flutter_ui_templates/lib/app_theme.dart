@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 class AppTheme {
   AppTheme._();
 
-//#A6ACAC
+//grey #A6ACAC
+  // active gray #91CACA
+  //main #00B8BA
+
   static const Color main_color=Color(0xFF00B8BA);
   static const Color notWhite = Color(0xFFEDF0F2);
   static const Color nearlyWhite = Color(0xFFFEFEFE);

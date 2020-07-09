@@ -61,7 +61,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
 
     listViews.add(
       TitleView(
-        titleTxt: 'Mediterranean diet',
+        titleTxt: 'Overall Trips Summary',
         subTxt: 'Details',
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
             parent: widget.animationController,
@@ -81,8 +81,8 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
     );
     listViews.add(
       TitleView(
-        titleTxt: 'Meals today',
-        subTxt: 'Customize',
+        titleTxt: 'Latest Violations:',
+        subTxt: 'Details',
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
             parent: widget.animationController,
             curve:
@@ -104,7 +104,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
 
     listViews.add(
       TitleView(
-        titleTxt: 'Body measurement',
+        titleTxt: 'Last Trip',
         subTxt: 'Today',
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
             parent: widget.animationController,
@@ -125,8 +125,8 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
     );
     listViews.add(
       TitleView(
-        titleTxt: 'Water',
-        subTxt: 'Aqua SmartBottle',
+        titleTxt: 'Eco Driving',
+        subTxt: 'Details',
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
             parent: widget.animationController,
             curve:
@@ -145,7 +145,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
         mainScreenAnimationController: widget.animationController,
       ),
     );
-    listViews.add(
+  /*  listViews.add(
       GlassView(
           animation: Tween<double>(begin: 0.0, end: 1.0).animate(
               CurvedAnimation(
@@ -153,7 +153,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
                   curve: Interval((1 / count) * 8, 1.0,
                       curve: Curves.fastOutSlowIn))),
           animationController: widget.animationController),
-    );
+    );*/
   }
 
   Future<bool> getData() async {
@@ -250,7 +250,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  'My Diary',
+                                  'Trips',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontFamily: FintnessAppTheme.fontName,

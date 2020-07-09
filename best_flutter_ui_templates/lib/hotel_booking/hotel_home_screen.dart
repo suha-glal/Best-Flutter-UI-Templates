@@ -529,7 +529,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
             top: MediaQuery.of(context).padding.top, left: 8, right: 8),
         child: Row(
           children: <Widget>[
-            Container(
+           /* Container(
               alignment: Alignment.centerLeft,
               width: AppBar().preferredSize.height + 40,
               height: AppBar().preferredSize.height,
@@ -548,7 +548,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                   ),
                 ),
               ),
-            ),
+            ),*/
             Expanded(
               child: Center(
                 child: Text(

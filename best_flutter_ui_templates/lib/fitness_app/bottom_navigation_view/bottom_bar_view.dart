@@ -52,7 +52,7 @@ class _BottomBarViewState extends State<BottomBarView>
                                 parent: animationController,
                                 curve: Curves.fastOutSlowIn))
                             .value *
-                        55.0),
+                        40),
                 child: Column(
                   children: <Widget>[
                     SizedBox(
