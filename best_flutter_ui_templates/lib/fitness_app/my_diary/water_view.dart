@@ -60,12 +60,12 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                     Padding(
                                       padding: const EdgeInsets.only(left: 4, bottom: 3),
                                       child: Text(
-                                        'Eco Driving Score:',
+                                        'Fuel Consumption:',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                           fontFamily: FintnessAppTheme.fontName,
                                           fontWeight: FontWeight.w600,
-                                          fontSize: 32,
+                                          fontSize: 18,
                                           color: FintnessAppTheme.nearlyDarkBlue,
                                         ),
                                       ),
@@ -87,14 +87,14 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                   ],
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 4, top: 2, bottom: 14),
+                                  padding: const EdgeInsets.only(left: 4, top: 8, bottom: 10),
                                   child: Text(
-                                    'You gas tank is requced by 30%',
-                                    textAlign: TextAlign.center,
+                                    'Your driving style\n casued 4.35% reduction\n in fuel consumption',
+                                    textAlign: TextAlign.left,
                                     style: TextStyle(
                                       fontFamily: FintnessAppTheme.fontName,
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 14,
+                                      fontSize: 12,
                                       letterSpacing: 0.0,
                                       color: FintnessAppTheme.darkText,
                                     ),
@@ -133,12 +133,12 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                       Padding(
                                         padding: const EdgeInsets.only(left: 4.0),
                                         child: Text(
-                                          'Last drink 8:26 AM',
-                                          textAlign: TextAlign.center,
+                                          ' Last refill\n 01/07/20 8:26 AM',
+                                          textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontFamily: FintnessAppTheme.fontName,
                                             fontWeight: FontWeight.w500,
-                                            fontSize: 14,
+                                            fontSize: 11,
                                             letterSpacing: 0.0,
                                             color: FintnessAppTheme.grey.withOpacity(0.5),
                                           ),
@@ -159,14 +159,14 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                         ),
                                         Flexible(
                                           child: Text(
-                                            'Your bottle is empty, refill it!.',
+                                            'Your tank is half empty, refill it!.',
                                             textAlign: TextAlign.start,
                                             style: TextStyle(
                                               fontFamily: FintnessAppTheme.fontName,
                                               fontWeight: FontWeight.w500,
                                               fontSize: 12,
                                               letterSpacing: 0.0,
-                                              color: HexColor('#F65283'),
+                                              color: HexColor('#EE94A6'),//'#F65283'),
                                             ),
                                           ),
                                         ),
@@ -179,7 +179,7 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                           ],
                         ),
                       ),
-                     /* SizedBox(
+                      SizedBox(
                         width: 34,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -224,7 +224,7 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                             ),
                           ],
                         ),
-                      ),*/
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(left: 16, right: 8, top: 16),
                         child: Container(
@@ -242,7 +242,7 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                             ],
                           ),
                           child: WaveView(
-                            percentageValue: 60.0,
+                            percentageValue: 40.0,
                           ),
                         ),
                       )

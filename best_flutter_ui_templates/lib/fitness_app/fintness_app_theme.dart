@@ -4,7 +4,7 @@ class FintnessAppTheme {
   FintnessAppTheme._();
   static const Color nearlyWhite = Color(0xFFFAFAFA);
   static const Color white = Color(0xFFFFFFFF);
-  static const Color background =  Color(0xFFf1f2f2);//Color(0xFFFFFFFF);//Color(0xFFF2F3F8);old color
+  static const Color background = Color(0xFFFFFFFF); //Color(0xFFf1f2f2);//Color(0xFFFFFFFF);//Color(0xFFF2F3F8);old color
   static const Color nearlyDarkBlue =Color(0xFF00B8BA); //Color(0xFF2633C5);
  static const Color yellow=Color(0xFFF1B440);
   static const Color nearlyBlue =Color(0xFF00FFED);// Color(0xFF00B6F0);

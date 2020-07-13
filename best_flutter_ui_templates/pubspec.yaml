@@ -32,6 +32,9 @@ dependencies:
   avatar_glow:
   smooth_star_rating: ^1.0.3
   intl: ^0.16.0
+  latlong: ^0.6.1
+  flutter_map: ^0.8.2
+  charts_flutter:
 
 dev_dependencies:
   flutter_test:

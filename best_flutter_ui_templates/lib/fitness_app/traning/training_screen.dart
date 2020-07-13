@@ -1,3 +1,5 @@
+import 'package:best_flutter_ui_templates/fitness_app/models/journey.dart';
+import 'package:best_flutter_ui_templates/fitness_app/models/journeys_list_data.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/area_list_view.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/running_view.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/title_view.dart';
@@ -5,6 +7,8 @@ import 'package:best_flutter_ui_templates/fitness_app/ui_view/workout_view.dart'
 import 'package:flutter/material.dart';
 
 import '../fintness_app_theme.dart';
+import '../trips_graph_statistics.dart';
+import '../utilities.dart';
 
 class TrainingScreen extends StatefulWidget {
   const TrainingScreen({Key key, this.animationController}) : super(key: key);
@@ -118,22 +122,36 @@ class _TrainingScreenState extends State<TrainingScreen>
     return true;
   }
 
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    final journeysList = journeyListFilled;
+
+    List journeyItems= journeysList.map((f)=>Journey(f)).toList();
+    return FutureBuilder<dynamic>(
+        future: getGroupListMapBG(journeyItems),
+        builder: (context, snapshot) {
+          if (snapshot.hasError) print(snapshot.error);
+
+          return snapshot.hasData
+              ? Container(
       color: FintnessAppTheme.background,
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: Stack(
+        body: Container(
+          height:800,
+          child:Column(
           children: <Widget>[
-            getMainListViewUI(),
-            getAppBarUI(),
-            SizedBox(
-              height: MediaQuery.of(context).padding.bottom,
-            )
+           // getAppBarUI(),
+            TripGraphStatisticsView(items:snapshot.data),
+
+          //  SizedBox(height: MediaQuery.of(context).padding.bottom,),
+
           ],
         ),
       ),
+    ) ): Center(child: CircularProgressIndicator());
+        },
     );
   }
 
